@@ -77,3 +77,6 @@ map("n", "<A-F12>", function()
   Snacks.terminal()
 end, { desc = "Toggle terminal" })
 map("t", "<A-F12>", "<cmd>close<cr>", { desc = "Close terminal" })
+
+-- "if" text object = inner file (select entire file)
+map({ "o", "x" }, "if", ":<C-u>normal! ggVG<CR>", { silent = true, desc = "Inner file" })

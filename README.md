@@ -51,6 +51,43 @@ Enabled extras:
 - C/C++ (clangd)
 - Java (jdtls)
 
+### Setup on a New Machine
+
+```bash
+# System packages (Ubuntu/Debian)
+
+# Java & C++
+sudo apt install openjdk-21-jdk clangd
+
+# PHP/Laravel
+sudo apt install php php-cli composer
+
+# Python
+sudo apt install python3 python3-pip python3-venv
+
+# Node.js (for Vue, HTML, CSS tooling)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install nodejs
+
+# C# (.NET SDK)
+sudo apt install dotnet-sdk-8.0
+```
+
+In Neovim:
+```vim
+:MasonInstall jdtls clangd                      " Java, C++
+:MasonInstall intelephense                      " PHP/Laravel
+:MasonInstall pyright ruff                      " Python
+:MasonInstall vue-language-server               " Vue.js
+:MasonInstall html-lsp css-lsp tailwindcss-language-server  " HTML/CSS
+:MasonInstall omnisharp                         " C#
+:MasonInstall sqlls                             " SQL
+
+:LazyExtras  " then enable:
+" lang.java, lang.clangd, lang.php, lang.python
+" lang.vue, lang.typescript, lang.csharp
+```
+
 ## Features
 
 - Auto-save on buffer leave / focus lost
