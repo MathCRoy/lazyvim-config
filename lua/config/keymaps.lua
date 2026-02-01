@@ -4,17 +4,11 @@
 
 local map = vim.keymap.set
 
--- Imported from IdeaVim
-
--- Escape with jk/kj
+-- Escape with jk/kj (insert mode only)
 map("i", "jk", "<Esc>", { desc = "Escape" })
 map("i", "JK", "<Esc>", { desc = "Escape" })
-map("v", "jk", "<Esc>", { desc = "Escape" })
-map("v", "JK", "<Esc>", { desc = "Escape" })
 map("i", "kj", "<Esc>", { desc = "Escape" })
 map("i", "KJ", "<Esc>", { desc = "Escape" })
-map("v", "kj", "<Esc>", { desc = "Escape" })
-map("v", "KJ", "<Esc>", { desc = "Escape" })
 
 -- Replacing stuff without yanking it (paste over and delete to black hole register)
 map("n", "<leader>rw", '"_diwP', { desc = "Replace word" })
