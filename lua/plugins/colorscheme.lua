@@ -14,7 +14,13 @@ return {
           vim.api.nvim_set_hl(0, "FloatBorder", { bg = bg })
           vim.api.nvim_set_hl(0, "Pmenu", { bg = bg })
           vim.api.nvim_set_hl(0, "SignColumn", { bg = bg })
-          vim.api.nvim_set_hl(0, "LineNr", { bg = bg })
+          vim.api.nvim_set_hl(0, "LineNr", { bg = bg, fg = "#3a3a3a" })
+          -- Gray out warnings
+          local gray = "#6b6b6b"
+          vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = gray })
+          vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = gray })
+          vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { sp = gray, undercurl = true })
+          vim.api.nvim_set_hl(0, "DiagnosticSignWarn", { fg = gray })
         end,
       })
     end,

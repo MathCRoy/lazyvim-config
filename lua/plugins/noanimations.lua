@@ -51,6 +51,12 @@ return {
   {
     "folke/noice.nvim",
     opts = {
+      cmdline = {
+        enabled = true,
+      },
+      messages = {
+        enabled = true,
+      },
       views = {
         cmdline_popup = {
           position = { row = 5, col = "50%" },

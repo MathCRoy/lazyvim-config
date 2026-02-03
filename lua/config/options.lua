@@ -14,3 +14,4 @@ vim.opt.timeoutlen = 300
 -- Absolute line numbers
 vim.opt.relativenumber = false
 vim.opt.number = true
+
