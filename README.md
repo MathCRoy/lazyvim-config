@@ -17,7 +17,8 @@ mkdir -p ~/.config/kitty
 grep -q "hide_window_decorations" ~/.config/kitty/kitty.conf 2>/dev/null || echo "hide_window_decorations yes" >> ~/.config/kitty/kitty.conf
 grep -q "tab_bar_style" ~/.config/kitty/kitty.conf 2>/dev/null || echo "tab_bar_style hidden" >> ~/.config/kitty/kitty.conf
 grep -q "alias vim" ~/.config/fish/config.fish 2>/dev/null || echo "alias vim='nvim'" >> ~/.config/fish/config.fish      
-chsh -s /usr/bin/fish  
+chsh -s /usr/bin/fish
+sudo apt install xclip
 
 # System packages (Ubuntu/Debian)
 sudo apt install openjdk-21-jdk clangd
