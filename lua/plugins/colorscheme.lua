@@ -21,6 +21,15 @@ return {
           vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = gray })
           vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { sp = gray, undercurl = true })
           vim.api.nvim_set_hl(0, "DiagnosticSignWarn", { fg = gray })
+          -- Scope/indent lines same color as line numbers
+          local lineNrColor = "#3a3a3a"
+          vim.api.nvim_set_hl(0, "SnacksIndent", { fg = lineNrColor })
+          vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = lineNrColor })
+          vim.api.nvim_set_hl(0, "SnacksIndentChunk", { fg = lineNrColor })
+          for i = 1, 8 do
+            vim.api.nvim_set_hl(0, "SnacksIndent" .. i, { fg = lineNrColor })
+          end
+          vim.api.nvim_set_hl(0, "MiniIndentscopeSymbol", { fg = lineNrColor })
         end,
       })
     end,
