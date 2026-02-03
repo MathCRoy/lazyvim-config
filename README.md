@@ -2,6 +2,32 @@
 
 Personal LazyVim configuration.
 
+### Setup on a New Machine
+```bash
+# Install in the right dir and update nvim
+git clone git@github.com:MathCRoy/lazyvim-config.git ~/.config/nvim
+                                                                                                                                                                           
+sudo rm /usr/local/bin/nvim                                                                                                                                                              
+sudo apt remove neovim                                                                                                                                                                      
+sudo apt install neovim 
+
+#Kitty and fish terminal and setup;
+sudo apt install kitty fish
+mkdir -p ~/.config/kitty
+grep -q "hide_window_decorations" ~/.config/kitty/kitty.conf 2>/dev/null || echo "hide_window_decorations yes" >> ~/.config/kitty/kitty.conf
+grep -q "tab_bar_style" ~/.config/kitty/kitty.conf 2>/dev/null || echo "tab_bar_style hidden" >> ~/.config/kitty/kitty.conf
+grep -q "alias vim" ~/.config/fish/config.fish 2>/dev/null || echo "alias vim='nvim'" >> ~/.config/fish/config.fish      
+chsh -s /usr/bin/fish  
+
+# System packages (Ubuntu/Debian)
+sudo apt install openjdk-21-jdk clangd
+sudo apt install php php-cli composer
+sudo apt install python3 python3-pip python3-venv
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install nodejs
+sudo apt install dotnet-sdk-8.0
+```
+
 ## Custom Keybindings
 
 ### Navigation
@@ -50,28 +76,6 @@ Personal LazyVim configuration.
 Enabled extras:
 - C/C++ (clangd)
 - Java (jdtls)
-
-### Setup on a New Machine
-
-```bash
-# System packages (Ubuntu/Debian)
-
-# Java & C++
-sudo apt install openjdk-21-jdk clangd
-
-# PHP/Laravel
-sudo apt install php php-cli composer
-
-# Python
-sudo apt install python3 python3-pip python3-venv
-
-# Node.js (for Vue, HTML, CSS tooling)
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt install nodejs
-
-# C# (.NET SDK)
-sudo apt install dotnet-sdk-8.0
-```
 
 In Neovim:
 ```vim
