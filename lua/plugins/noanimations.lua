@@ -72,7 +72,7 @@ return {
   },
   -- Disable mini.indentscope completely
   {
-    "echasnovski/mini.indentscope",
+    "nvim-mini/mini.indentscope",
     enabled = false,
   },
 }
