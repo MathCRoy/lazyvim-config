@@ -21,7 +21,7 @@ chsh -s /usr/bin/fish
 sudo apt install xclip
 
 # System packages (Ubuntu/Debian)
-sudo apt install openjdk-21-jdk clangd
+sudo apt install ripgrep openjdk-21-jdk clangd
 sudo apt install php php-cli composer
 sudo apt install python3 python3-pip python3-venv
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
