@@ -66,11 +66,11 @@ end, { desc = "Clear all panels" })
 map("n", "<C-/>", "gcc", { desc = "Toggle comment", remap = true })
 map("v", "<C-/>", "gc", { desc = "Toggle comment", remap = true })
 
--- Alt+F12 to toggle floating terminal
-map("n", "<A-F12>", function()
-  Snacks.terminal()
+-- F12 to toggle floating terminal
+map("n", "<F12>", function()
+  require("snacks").terminal()
 end, { desc = "Toggle terminal" })
-map("t", "<A-F12>", "<cmd>close<cr>", { desc = "Close terminal" })
+map("t", "<F12>", "<cmd>close<cr>", { desc = "Close terminal" })
 
 -- "if" text object = inner file (select entire file)
 map({ "o", "x" }, "if", ":<C-u>normal! ggVG<CR>", { silent = true, desc = "Inner file" })

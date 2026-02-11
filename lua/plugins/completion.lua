@@ -14,12 +14,5 @@ return {
         selection = { preselect = true, auto_insert = false },
       },
     },
-    sources = {
-      providers = {
-        lsp = {
-          trigger_characters = { ".", ":", "<", '"', "/" },
-        },
-      },
-    },
   },
 }

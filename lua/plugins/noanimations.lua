@@ -10,6 +10,20 @@ return {
         animate = { enabled = false },
         scope = { enabled = false },
       },
+      explorer = {
+        replace_netrw = true,
+      },
+      terminal = {
+        enabled = true,
+      },
+      picker = {
+        sources = {
+          explorer = {
+            hidden = true,
+            ignored = true,
+          },
+        },
+      },
     },
     init = function()
       local bg = "#11131A"

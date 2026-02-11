@@ -21,6 +21,7 @@ require("lazy").setup({
     -- language extras
     { import = "lazyvim.plugins.extras.lang.clangd" },
     { import = "lazyvim.plugins.extras.lang.java" },
+    { import = "lazyvim.plugins.extras.lang.vue" },
     -- import/override with your plugins
     { import = "plugins" },
   },
